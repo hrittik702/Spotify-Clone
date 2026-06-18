@@ -1,0 +1,236 @@
+:root {
+  --color-primary: #fff;
+  --color-box-background: #121212;
+  --color-current-item: #484848;
+  --color-button-hover: #333333;
+  --color-nav-search: #1f1f1f;
+  --color-nav-search-hover: #2a2a2a;
+  --color-profile-bg: #b49bc8;
+  --color-play-btn: #1ed760;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+#main {
+  padding: 0 10px;
+  overflow: auto;
+  width: 100vw;
+  padding-top: 10px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 45px repeat(13, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+}
+
+#navbar {
+  box-sizing: border-box;
+  grid-column: 1/13;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar > img {
+  width: 2.5vw;
+  /* padding-top: 0.7vw; */
+  margin-left: 1.5vw;
+}
+
+.search-bar {
+  position: relative;
+  left: 13%;
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  gap: 0.5vw;
+}
+
+#navbar .search-bar > img {
+  box-sizing: content-box;
+  background-color: #1f1f1f;
+  border: 10px solid #1f1f1f;
+  border-radius: 50%;
+}
+
+#search {
+  background-color: var(--color-nav-search);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-size: 1.6vw;
+  padding: 0.2vw 1vw;
+  gap: 7px;
+}
+
+#search span{
+  color: #b3b3b3;
+}
+
+#search input {
+  width: 26vw;
+  height: 100%;
+  background-color: var(--color-nav-search);
+  border: none;
+  color: #b3b3b3;
+  font-weight: 500;
+  letter-spacing: -0.01vw;
+  font-size: 1.1vw;
+}
+
+#search:hover {
+  border: 1px solid rgba(222, 222, 222, 0.1);
+  background-color: #2a2a2a;
+  animation: change-background 1s infinite;
+}
+
+#search input::placeholder {
+  color: #b3b3b3;
+}
+
+#search:hover input {
+  background-color: #2a2a2a;
+}
+
+#search>i {
+  color: #b3b3b3;
+}
+
+#search:focus-within{
+  border-color: white;
+}
+
+#search input:focus{
+  outline: none;
+  border: none;
+  color: white;
+}
+
+
+.nav-right {
+  height: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.nav-right i {
+  color: #adadad;
+}
+
+.nav-right i:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+.install-app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #adadad;
+  gap: 4px;
+}
+
+.install-app:hover {
+  color: white;
+  transform: scale(1.05);
+}
+
+.nav-right .explore-premium {
+  height: 4vh;
+  background-color: white;
+  color: black;
+}
+
+.nav-right button {
+  padding: 4px 16px;
+  border: none;
+  height: 100%;
+  border-radius: 35px;
+  font-weight: 700;
+}
+
+.nav-right button:hover {
+  transform: scale(1.05);
+}
+
+.nav-right .user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile {
+  box-sizing: content-box;
+  width: 33.5px;
+  height: 33.5px;
+  background-color: var(--color-profile-bg);
+  border: 8px solid #1f1f1f;
+  font-weight: 600;
+  color: black;
+  border-radius: 50%;
+}
+
+.user-profile:hover {
+  transform: scale(1.05);
+}
+
+/* Left Sidebar */
+#left-sidebar {
+  padding: 10px 10px 0 10px;
+  background-color: var(--color-box-background);
+  border-radius: 10px;
+  grid-column: 1 / span 3;
+  grid-row: 2 / span 11;
+}
+
+#main-content {
+  overflow: auto;
+  grid-row: 2 / span 11;
+  grid-column: 4 / span 6;
+  background-color: var(--color-box-background);
+  border-radius: 10px;
+}
+
+#right-sidebar {
+  background-color: var(--color-box-background);
+  border-radius: 10px;
+  grid-column: 10 / span 3;
+  grid-row: 2 / span 11;
+}
+
+#player {
+  grid-row: 13 / span 2;
+  grid-column: 1 / span 12;
+}
+
+/* /* #spotify-logo{
+    display: flex;
+    align-items: center;
+}
+
+nav {
+  height: 8vh;
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  align-items: center;
+} */
