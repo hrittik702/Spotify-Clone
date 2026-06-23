@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
     <title>Spotify - Web Player</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,49 +14,602 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="main">
-      <!-- <nav>
-        <div id="spotify-logo"><img src="spotify.png" alt="" /></div>
-        
-      </nav> -->
-      <div id="navbar">
-        <img src="spotify-green.png" alt="" />
+      <section id="navbar">
+        <a href=""><img src="spotify-green.png" alt="" /></a>
         <div class="search-bar">
-          <img src="home.png" alt="">
+          <a href="#"><img src="home.png" alt="" /></a>
           <div id="search">
-            <i class="ri-search-line"></i>
-            <input type="text" placeholder="What do you want to play ?">
-            
+            <a href="" class="scale-item faded"
+              ><i class="ri-search-line"></i
+            ></a>
+            <input type="text" placeholder="What do you want to play ?" />
             <span>|</span>
-            <i class="ri-folder-5-line"></i>
+            <a href="#" class="scale-item faded"
+              ><i class="ri-folder-5-line"></i
+            ></a>
           </div>
         </div>
         <div class="nav-right">
-          <button class="explore-premium">Explore Premium</button>
-          <div class="install-app">
-            <i class="ri-download-line"></i>Install App
-          </div>
-          <div class="icons">
-            <i class="ri-notification-2-fill"></i>
-            <i class="ri-team-line"></i>
-          </div>
-          <div class="user-profile">H</div>
+          <a href="#" class="explore-premium scale-item">Explore Premium</a>
+          <a href="#" class="install-app scale-item faded"
+            ><i class="ri-download-line"></i>Install App</a
+          >
+          <a href="#" class="scale-item faded"
+            ><i class="fa-regular fa-bell"></i
+          ></a>
+          <a href="#" class="scale-item faded"><i class="ri-team-line"></i></a>
+          <a href="#"><div class="user-profile scale-item">H</div></a>
         </div>
-      </div>
-      <div id="left-sidebar">
-        <div class="sup">
+      </section>
+      <section id="left-sidebar">
+        <div>
           <div class="head">
             <h3>Your Library</h3>
+            <div class="icons">
+              <a href="" id="full-circle"><i class="fa-solid fa-plus"></i></a>
+              <a href="" id="no-circle"
+                ><i class="fa-solid fa-up-right-and-down-left-from-center"></i
+              ></a>
+            </div>
+          </div>
+          <div class="head2">
+            <a href="">Playlists</a>
+            <a href="">Artists</a>
+            <a href="">Podcasts</a>
           </div>
         </div>
-        <div class="sdown"></div>
+        <div class="sdown">
+          <div class="sdown-head">
+            <a href=""><i class="ri-search-line"></i></a>
+            <div class="recents">
+              Recents
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+          <div class="songs-list">
+            <div class="cards song-banner">
+              <img
+                src="https://preview.redd.it/heres-some-playlist-icons-in-the-style-of-liked-songs-you-v0-cahrrr1is8ee1.png?width=473&format=png&auto=webp&s=e33bfdb466d30f69fa4209b41f90dc7e41f0e609"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Liked Songs</p>
+                <p class="sub-title">Playlists | 40 Songs</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmVsbiL8D3czSSEU2XIqSUP12F_XVqlpqbTKqyMznGA&s=10"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Deewana Deewana</p>
+                <p class="sub-title">A.R. Rahman, Irshad Kamil</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.iheart.com/v3/catalog/artist/396790?ops=fit(480%2C480)%2Crun(%22circle%22)"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Ed Shheran</p>
+                <p class="sub-title">Artist</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://preview.redd.it/heres-some-playlist-icons-in-the-style-of-liked-songs-you-v0-mamhipqhs8ee1.png?width=468&format=png&auto=webp&s=8df964736cd9f1ab70ff41485791dbe0135e8fd1"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Random Songs</p>
+                <p class="sub-title">Most liked songs</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+            <div class="cards song-banner">
+              <img
+                src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+                alt=""
+              />
+              <div class="info">
+                <p class="title">Perfect</p>
+                <p class="sub-title">Ed Sheeran</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="main-content">
+        <div class="sticky-nav">
+          <a href="">All</a>
+          <a href="">Music</a>
+          <a href="">Podcasts</a>
+        </div>
+        <div class="content">
+          <div class="highlights">
+            <img
+              src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+              alt=""
+            />
+            <p class="title">Karma Song</p>
+          </div>
+          <div class="highlights">
+            <img
+              src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+              alt=""
+            />
+            <p class="title">Karma Song</p>
+          </div>
+        </div>
+        <div class="songs-cards">
+          <div class="upper">Motivational Songs</div>
+          <div class="lower">
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+          </div>
+        </div>
+        <div class="songs-cards">
+          <div class="upper">Motivational Songs</div>
+          <div class="lower">
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+          </div>
+        </div>
+        <div class="songs-cards">
+          <div class="upper">Motivational Songs</div>
+          <div class="lower">
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+          </div>
+        </div>
+        <div class="songs-cards">
+          <div class="upper">Motivational Songs</div>
+          <div class="lower">
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+            <div class="banner">
+              <img
+                src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+                alt=""
+              />
+              <h4 class="title">Kantara</h4>
+              <p>Singer</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="main-content"></div>
-      <div id="right-sidebar"></div>
-      <div id="player"></div>
+      <div id="right-sidebar">
+        <div class="head">
+          <span><h3>Karma Song</h3></span>
+          <div class="head-right">
+            <i class="fa-solid fa-ellipsis"></i>
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="sdown">
+          <img
+            src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+            alt=""
+          />
+          <div class="info">
+            <div class="info-left">
+              <a href=""><h2>Karma Song</h2></a>
+              <div class="sub-title">
+                <a href="">B. Ajaneesh Loknath, </a><a href="">Juno,</a
+                ><a href="">Venkatesh D. C</a>
+              </div>
+            </div>
+            <i class="ri-add-circle-line"></i>
+          </div>
+          <div class="sub-cards">
+            <div class="head">
+              <h3>Credits</h3>
+              <a href="">Show All</a>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+          </div>
+          <div class="sub-cards">
+            <div class="head">
+              <h3>Credits</h3>
+              <a href="">Show All</a>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+            <div class="cards">
+              <div class="credits">
+                <h5 class="title">B. Ajaneesh Loknath</h5>
+                <p class="sub-title">Main Artist • Composer</p>
+              </div>
+              <button>Follow</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="player">
+        <div class="song-banner">
+          <img
+            src="https://raagtune.com.se/images/album_1766641468_7953.jpg"
+            alt=""
+          />
+          <div class="info">
+            <p class="title">Karma Song - Kantara</p>
+            <p class="sub-title">Juno, B. Ajaneesh Loknath, Venkatesh D. C.</p>
+          </div>
+          <i class="ri-add-circle-line"></i>
+        </div>
+        <div class="player-controls">
+          <div class="controls">
+            <!-- Shuffle -->
+            <i class="ri-shuffle-line"></i>
+            <!-- previous -->
+            <i class="ri-skip-back-fill"></i>
+            <!-- play / pause -->
+            <i class="ri-play-circle-fill" id="play"></i>
+            <i class="ri-pause-circle-fill" id="pause"></i>
+            <!-- next -->
+            <i class="ri-skip-forward-fill"></i>
+            <!-- repeat -->
+            <i class="ri-repeat-2-line"></i>
+          </div>
+          <div class="progress">
+            <span>0:00</span>
+            <input type="range" min="0" max="100" value="30" step="1" />
+            <audio src="Perfect.mp3"></audio>
+            <span>4:20</span>
+          </div>
+        </div>
+        <div class="add-controls">
+          <i class="ri-mic-ai-line"></i>
+          <i class="ri-archive-stack-fill"></i>
+          <i class="ri-macbook-line"></i>
+          <i class="ri-volume-up-fill" id="speak"></i>
+          <div class="volume">
+            <input type="range" min="0" max="100" value="30" />
+          </div>
+          <i class="ri-picture-in-picture-fill"></i>
+          <i class="ri-fullscreen-fill"></i>
+        </div>
+      </div>
     </div>
   </body>
 </html>
