@@ -1035,13 +1035,13 @@ footer .down {
   background-color: white;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .search-bar,.install-app,.nav-right>a:nth-child(4){
     display: none;
   }
 
   #main{
-    grid-template-rows: 3rem 1fr 13%;
+    grid-template-rows: 3rem 1fr 4%;
   }
 
   .explore-premium{
@@ -1161,8 +1161,10 @@ footer .down {
   } */
 
   #player{
-    height: 45%;
+    height: 100%;
     /* padding: 0 1rem; */
+    align-items: center;
+
     width: 100%;
   }
 
@@ -1191,6 +1193,16 @@ footer .down {
     font-size: 1.2rem;
   }
 
+  #main{
+    height: calc(100vh - 10%);
+  }
+}
 
-
+@media (max-width: 400px) {
+  #main{
+    height: 92vh;
+  }
+  #player {
+    margin-top: 0.3rem;
+  }
 }
