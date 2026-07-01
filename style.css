@@ -853,7 +853,7 @@ footer .down {
 }
 
 .song-banner {
-  width: fit-content;
+  width: 33%;
   height: 100%;
   display: flex;
   align-items: center;
